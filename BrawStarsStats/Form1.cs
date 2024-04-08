@@ -60,7 +60,7 @@ namespace BrawStarsStats
             var client = new RestClient("https://api.brawlstars.com/v1/players/%2322POYYPRC");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
-            request.AddHeader("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIwOWMzZjc3LWU5YWQtNGE2NS04YjA5LWUyNmFlMmI1Yzg4ZCIsImlhdCI6MTcxMjMzMTY4Miwic3ViIjoiZGV2ZWxvcGVyL2ZhNGZkOTc0LTA2MDUtMWIxMi1hZmQ0LTQwNjcwYTljNzQzOCIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuMTg2LjIxNy4xMjgiXSwidHlwZSI6ImNsaWVudCJ9XX0.7ofpP_-V5bc0QGpKi-FtlJl0eGvMgHonlSY79XbRFqNZlyteMuAg2KhSq1g5IRV4aFDYOkJIEV5CP3e4NUh4SA");
+            request.AddHeader("Authorization", "Bearer *******");
             IRestResponse response = client.Execute(request);
             PlayerRequest resultPlayer = JsonConvert.DeserializeObject<PlayerRequest>(response.Content);
             
@@ -90,7 +90,7 @@ namespace BrawStarsStats
             var client = new RestClient("https://api.brawlstars.com/v1/players/%2322POYYPRC/battlelog");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
-            request.AddHeader("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIwOWMzZjc3LWU5YWQtNGE2NS04YjA5LWUyNmFlMmI1Yzg4ZCIsImlhdCI6MTcxMjMzMTY4Miwic3ViIjoiZGV2ZWxvcGVyL2ZhNGZkOTc0LTA2MDUtMWIxMi1hZmQ0LTQwNjcwYTljNzQzOCIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuMTg2LjIxNy4xMjgiXSwidHlwZSI6ImNsaWVudCJ9XX0.7ofpP_-V5bc0QGpKi-FtlJl0eGvMgHonlSY79XbRFqNZlyteMuAg2KhSq1g5IRV4aFDYOkJIEV5CP3e4NUh4SA");
+            request.AddHeader("Authorization", "Bearer ******");
             IRestResponse response = client.Execute(request);
             dynamic resultBattle = JsonConvert.DeserializeObject(response.Content);
             if (resultBattle.items != null)
